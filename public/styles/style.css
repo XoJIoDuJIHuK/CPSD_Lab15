@@ -1,0 +1,30 @@
+ul {
+    display: block;
+    margin: 10px 0 10px 0;
+    padding: 0;
+}
+ul button {
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: gray;
+    margin: 10px 10px 10px 0;
+}
+
+.input-field {
+    display: flex;
+    width: 100%;
+    height: max-content;
+    justify-content: center;
+}
+.input-field button.get-add-button {
+    width: calc(100% - 20px);
+    height: 60px;
+    background-color: azure;
+}
+.input-field .first-row, .input-field .second-row {
+    display: block;
+    width: 100%;
+    height: max-content;
+    margin-bottom: 6px;
+}

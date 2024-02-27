@@ -1,0 +1,15 @@
+<ul>
+    {{#each phonebook}}
+        {{> record}}
+    {{/each}}
+</ul>
+<form class="input-field" method="post" action="add">
+    <div class="first-row">
+        <input name="name" value="FIO" type="text"/>
+        <input name="phoneNumber" value="phone number" type="tel"/>
+    </div><br>
+    <div class="second-row">
+        <button class="add-add-button" type="submit">Добавить</button>
+        {{{refuseButton}}}
+    </div>
+</form>

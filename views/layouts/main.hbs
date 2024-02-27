@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phonebook App</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="/scripts/script.js"></script>
+</head>
+<body>
+    <main>
+        {{#if renderGet}}
+            {{> getPanel phonebook=phonebook}}
+        {{/if}}
+        {{#if renderAdd}}
+            {{> addPanel phonebook=phonebook}}
+        {{/if}}
+        {{#if renderUpdate}}
+            {{> updatePanel phonebook=phonebook person=person}}
+        {{/if}}
+    </main>
+</body>
+</html>

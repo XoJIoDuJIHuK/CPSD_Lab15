@@ -1,0 +1,16 @@
+<ul>
+    {{#each phonebook}}
+        {{> record}}
+    {{/each}}
+</ul>
+<form class="input-field" method="post" action="update">
+    <div class="first-row">
+        <input id="personName" name="name" value="{{person.name}}" type="text"/>
+        <input name="phoneNumber" value="{{person.phoneNumber}}" type="tel"/>
+    </div><br>
+    <div class="second-row">
+        <button class="update-save-button" type="submit">Изменить</button>
+        <button class="update-delete-button" type="button" onclick="fetch(`http://localhost:3000/delete?name=${personName.value}`, {method: 'POST'}).then(() => {window.location.href='/'})">Удалить</button>
+        {{{refuseButton}}}
+    </div>
+</form>
