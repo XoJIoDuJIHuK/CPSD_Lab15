@@ -26,7 +26,7 @@ app.set('view engine', 'hbs')
 app.engine('hbs', engine({
 	helpers: {
 		refuseButton: function () {
-			return '<button type="button" onclick="window.location.href=\'http://localhost:3000/\'">Отказаться</button>'
+			return '<button type="button" onclick="window.location.href=\'/\'">Отказаться</button>'
 		}
 	},
 	extname: 'hbs'
@@ -104,7 +104,7 @@ app.post('/delete', (req, res) => {
 		return
 	}
 	phonebookData.splice(phonebookData.findIndex(obj => obj.name === name), 1)
-	res.redirect('http://localhost:3000')
+	res.redirect('/')
 })
 
 app.listen(port, () => {
